@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { PageEvent } from '@angular/material/paginator';
-import { MatSnackBar } from '@angular/material/snack-bar';
+//import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBar,MatSnackBarModule} from '@angular/material/snack-bar';
+
+
+import { LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
+//import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
 import { SaleService } from 'src/app/service/sale.service';
 import { ConfirmaDeleteComponent } from 'src/app/util/confirma-delete/confirma-delete.component';
 import { Sale } from '../sale/sale';
@@ -9,6 +13,7 @@ import { Sale } from '../sale/sale';
 @Component({
   templateUrl: './sales-list.component.html',
   styleUrls: ['./sales-list.component.scss']
+
 })
 export class SalesListComponent implements OnInit {
 

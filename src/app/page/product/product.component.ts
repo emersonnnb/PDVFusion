@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { PageEvent } from '@angular/material/paginator';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProductService } from 'src/app/service/product.service';
 import { ConfirmaDeleteComponent } from 'src/app/util/confirma-delete/confirma-delete.component';
 import { Product } from './product';
 import parseMoney from 'parse-money';
+import { MatDialog } from '@angular/material/dialog';
+import { PageEvent } from '@angular/material/paginator';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-product',
@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
   formulario: FormGroup;
   //lista de products para exiboir
   products: Product[] = [];
-  //ordem das colunas no html 
+  //ordem das colunas no html
   ordemColunasTabela = ['id', 'name', 'price', 'active', 'excluir', 'editar'];
   totalElementos = 0;
   pagina = 0;

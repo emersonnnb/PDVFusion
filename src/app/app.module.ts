@@ -2,24 +2,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+//import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+//import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatDialogModule } from '@angular/material/dialog';
+//import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatFormFieldModule } from '@angular/material/form-field';
+//import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+//import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
+//import { MatLegacyPaginatorModule as MatPaginatorModule } from '@angular/material/legacy-paginator';
+//import { MatLegacyRadioModule as MatRadioModule } from '@angular/material/legacy-radio';
+//import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
+//import { MatLegacySnackBarModule as MatSnackBarModule } from '@angular/material/legacy-snack-bar';
 import { MatSortModule } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
-import { MatTabsModule } from '@angular/material/tabs';
+//import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+//import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTooltipModule } from '@angular/material/tooltip';
+//import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -30,7 +30,7 @@ import { HomeComponent } from './page/home/home.component';
 ///////componentes add posteriormente
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { MatChipsModule } from '@angular/material/chips';
+//import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy-chips';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NgxMaskModule } from 'ngx-mask';
 import { ProductComponent } from './page/product/product.component';
@@ -48,6 +48,21 @@ import { HttpInterceptorModule } from './service/headerInterceptor.service';
 import { CustomerComponent } from './page/customer/customer.component';
 import { SupplierComponent } from './page/supplier/supplier.component';
 import { FinancialComponent } from './page/financial/financial.component';
+///// Angular Material
+
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -90,7 +105,6 @@ registerLocaleData(localePt, 'pt-BR');
     FormsModule,
     CurrencyMaskModule,
     HttpInterceptorModule,//setar token no header
-
     MatDatepickerModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -118,7 +132,7 @@ registerLocaleData(localePt, 'pt-BR');
     //   useValue: 'pt'
     // },
 
-    // /* if you don't provide the currency symbol in the pipe, 
+    // /* if you don't provide the currency symbol in the pipe,
     // this is going to be the default symbol (R$) ... */
     // {
     //   provide: DEFAULT_CURRENCY_CODE,

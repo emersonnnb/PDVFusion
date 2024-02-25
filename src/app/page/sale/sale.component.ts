@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProductService } from 'src/app/service/product.service';
 import { SaleService } from 'src/app/service/sale.service';
 import { SaleDialogComponent } from '../sale-dialog/sale-dialog.component';
 import { ProductSold } from './productSold';
 import { Sale } from './sale';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-sale',
   templateUrl: './sale.component.html',
@@ -16,7 +16,7 @@ export class SaleComponent implements OnInit {
 
   productsSolds: ProductSold[] = [];
   formAddItem: FormGroup;
-  //ordem das colunas no html 
+  //ordem das colunas no html
   ordemColunasTabela = ['id', 'quantity', 'name', 'price', 'priceTotal'];
   totalElementos = 0;
   pagina = 0;
