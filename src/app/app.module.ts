@@ -32,7 +32,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 //import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy-chips';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { NgxMaskModule } from 'ngx-mask';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { ProductComponent } from './page/product/product.component';
 import { SaleDialogComponent } from './page/sale-dialog/sale-dialog.component';
 import { SaleComponent } from './page/sale/sale.component';
@@ -41,7 +41,7 @@ import { PaymentService } from './service/payment.service';
 import { ProductService } from './service/product.service';
 import { ConfirmaDeleteComponent } from './util/confirma-delete/confirma-delete.component';
 import { SaleService } from './service/sale.service';
-import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { CurrencyMaskModule } from "ng2-currency-mask";
 import { LoginService } from './service/login.service';
 import { LoginComponent } from './page/login/login.component';
 import { HttpInterceptorModule } from './service/headerInterceptor.service';
@@ -113,13 +113,12 @@ registerLocaleData(localePt, 'pt-BR');
     MatSelectModule,
     MatBadgeModule,
     MatChipsModule,
-    NgxMaskModule.forRoot(
-      { // não salvar a mascara
-        dropSpecialCharacters: false
-      }
-    ),
+    NgxMaskDirective, 
+    NgxMaskPipe
+ 
   ],
   providers: [
+    provideNgxMask(),
     ProductService,
     PaymentService,
     SaleService,
