@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
-import { MatLegacyDialogRef as MatDialogRef, MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
 import { PaymentService } from 'src/app/service/payment.service';
 import { Payment } from '../payment/payment';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-example-dialog',
